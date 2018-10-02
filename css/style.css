@@ -1,26 +1,25 @@
 body {
     padding: 0;
     margin: 0;
-    background: url(../images/bg.png) 0 0;
-    background-position: center;
+    background: url(../images/bg.png) 0 0 repeat-x;
     width: 1536px;
     height: 700px;
+	animation: moveBg 10s linear infinite;
 }
 
-#bird {
+/* #bird {
     background: url(../images/bird.png);
     width: 184px;
     height: 184px;
     position: absolute;
-    top: 250px;
-    left: 1350px;
+    top: 100px;
+    left: 500px;
     animation: bird 0.3s steps(5) infinite;
     transition: 4s;
     z-index: 30;
-    visibility: hidden;
-}
+} */
 
-#instuctions {
+/* #instuctions {
     z-index: 20;
     color: black;
     position: absolute;
@@ -40,19 +39,18 @@ body {
     font-weight: 600;
     animation-delay: 4s;
     transition: 1s;
-    /* visibility: hidden; */
     transition-delay: 4s;
     
-}
+} */
 
 #dog {
     background: url(../images/dog/run.png);
     width: 157.8571428571429px;
     height: 110px;
     position: absolute;
-    top: 650px;
+    top: 734px;
     left: 414px;
-    animation:  0.3s steps(21) infinite;
+    animation:  dogRun 0.3s steps(21) infinite;
     transition: 10s;
 }
 #boy {
@@ -60,12 +58,12 @@ body {
     width: 134px;
     height: 200px;
     position: absolute;
-    top: 560px;
+    top: 651px;
     left: 250px;
-    animation:  0.7s steps(8) infinite;
+    animation:  boyRun 0.7s steps(8) infinite;
     transition: 4s;
 }
-#fire {
+/* #fire {
     background: url(../images/fire.png) 0 0 no-repeat;
     width:194.3333333333333px;
     height: 198px;
@@ -84,16 +82,18 @@ body {
     top: 573px;
     left: 17px;
    
-}
+} */
 
-#tent{
+/* #tent{
     background: url(../images/tent.png) 0 0 no-repeat;
     width:486px;
     height: 300px;
     position: absolute;
     top: 430px;
     left: 1000px;
-}
+    transition-duration: 10s;
+    
+} */
 
 
 
@@ -110,7 +110,12 @@ body {
     from {background-position: 0 0;}
     to {background-position: -583px 0;}
   }
-@keyframes bird {
+/* @keyframes bird {
   from {background-position: 0 0;}
- to {background-position: -920px 0;}
-  }
+ to {background-position: 920px 0;}
+  } */
+
+  @keyframes moveBg {
+	from { background-position: 0 0; }
+	to { background-position: -1536px  0; }
+}
